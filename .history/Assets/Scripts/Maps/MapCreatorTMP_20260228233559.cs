@@ -34,9 +34,9 @@ public class MapCreatorTMP : MonoBehaviour
     {
         // 创建一个 DataContainer 用于保存所有 Data
         DataContainer dataContainer = new DataContainer();
-
+        
         // 添加歌曲信息（如果有的话）
-        dataContainer.SongInfo.Add(songData);
+        dataContainer.SongInfo.Add(Data);
         
         // 检查 noteData 是否已初始化
         if (noteData != null)
@@ -46,7 +46,7 @@ public class MapCreatorTMP : MonoBehaviour
         }
         else
         {
-            // 测试数据
+            // 如果 noteData 为 null，可以创建一个测试数据
             dataContainer.Notes.Add(new NoteData(1000, 1, 1, 2.5f));
             Debug.LogWarning("noteData is null, using test data instead");
         }
